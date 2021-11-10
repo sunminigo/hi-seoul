@@ -1,0 +1,111 @@
+/*-----------------
+	header
+------------------*/
+.header_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	
+	.logo {
+		text-align: center;
+		color: #2E399D;
+	}
+	.btn_menu {
+		font-size: 3.75rem;
+	}
+	.btn_search {
+		font-size: 3.75rem;
+	}
+}
+
+/*-----------------
+	main
+------------------*/
+.page_main {
+	height: 100%;
+	overflow-x: hidden;
+
+	.container_wrap {
+		display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	}
+
+	.img_box {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.slider {
+		padding: 3rem 0 0;
+		touch-action: auto !important;
+		-ms-touch-action: pan-y;
+		touch-action: pan-y;
+
+		.slick-list {
+			margin:0 -0.156rem;
+			padding: 0 1rem;
+		}
+		.slick-slide {
+			position: relative;
+			touch-action: auto;
+			-ms-touch-action: auto;
+    	margin:0 0.625rem; //10px
+
+			img {
+				width: 100%;
+			}
+			.content {
+				position: absolute;
+				bottom: 1.688rem; //27px
+				left: 0;
+				text-align: center;
+    		width: 100%;
+
+				p {
+					line-height: 1.5;
+					color: #fff;
+				}
+				.main_txt {
+					font-size: 1.875rem; //30px
+					font-weight: bold;
+				}
+				.sub_txt {
+					font-size: 1.125rem; //18px
+					font-weight: light;
+				}
+			}
+		}
+		.slick-dots {
+			li {
+				width: 0.625rem;
+    		height: 0.625rem;
+
+				&.slick-active {
+					button:before {
+						content: '●';
+					}
+				}
+				button:before {
+					content: '○';
+					color: #a8a8a8 !important;
+					opacity: 1;
+					font-size: 0.563rem;
+				}
+			}
+		}
+	}
+
+	.label_banner {
+		margin-top: 1.25rem; //20px
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
