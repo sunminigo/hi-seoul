@@ -1,8 +1,6 @@
 $(function () {
 	var naviHei = $('.navigation').outerHeight();
-	var headerHei = $('.header_wrap').outerHeight();
 
-	// $('.page_main .container_wrap').css({'height': 'calc(100% - '+(headerHei+naviHei)+'px)'});
 	$('.navi_hidden_box').css({'height': naviHei});
 
 	sideMenu();
@@ -26,14 +24,10 @@ slider = function () {
 	var slideCnt = 2.1;
 
 
-	if (winWid == 375 && winHei == 812) {
-		// $('.slider_box').css({'margin': '2vh 0 7vh'});
-		slideCnt = 2.1;
-	} else if (winWid == 1440 && winHei == 3200) {
-		$('.page_main .img_box').css({'flex': '2'});
-		slideCnt = 2.1;
+	if (winWid == 375 && winHei == 812 || winWid == 280 && winHei == 653) {
+		slideCnt = 1.1;
 	}
-
+	
 	tabBox = function () {
 		$('.tab_menu > ul > li').eq(0).addClass('active');
 		$('.tab_content > div').hide().eq(0).show();
